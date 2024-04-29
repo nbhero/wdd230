@@ -1,0 +1,33 @@
+@media (max-width: 375px) {
+    header {
+        display: flex;
+        text-align: center;
+    }
+
+    nav {
+        background-color: var(--Third-Color);
+        margin: 0 auto;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        font-family: var(--Navigation-Font);
+        color: white;
+        text-decoration: none;
+    }
+    
+    main {
+        display: block;
+    }
+    main h1 {
+        font-size: 22px;
+    }
+}
