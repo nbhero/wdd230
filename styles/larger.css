@@ -28,6 +28,12 @@
         display: block;
     }
     main h1 {
-        font-size: 22px;
+        font-size: 18px;
+    }
+    .card {
+        margin: 10px 0;
+    }
+    .card ul {
+        margin-left: -30px;
     }
 }
