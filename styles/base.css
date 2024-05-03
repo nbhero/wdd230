@@ -4,6 +4,10 @@
         text-align: center;
     }
 
+    #menu {
+        display: block;
+    }
+
     nav {
         background-color: var(--Third-Color);
         margin: 0 auto;
@@ -15,23 +19,32 @@
 
     nav a {
         font-size: 1.2rem;
+        display: none;
         font-family: var(--Navigation-Font);
         color: white;
         text-decoration: none;
     }
-    
+
+    .open a {
+        display: block;
+    }
+
     main {
         display: block;
     }
+
     main h1 {
         font-size: 18px;
     }
+
     .card {
         margin: 10px 0;
     }
+
     .card ul {
         margin-left: -30px;
     }
+
     .weather img {
         width: 100px;
         padding: 0;

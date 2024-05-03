@@ -28,6 +28,21 @@ header img {
     border-radius: 100px;
     justify-self: end;
 }
+#menu {
+    display: none;
+    grid-column: 3/3;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--Fourth-Color);
+    margin: 0 auto;
+}
+#menu::before {
+    content: "☰";
+}
+#menu.open::before {
+	content: "X";
+}
 nav {
     background-color: var(--Third-Color);
     margin: 0 auto;
