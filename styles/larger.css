@@ -83,6 +83,10 @@ main h1 {
     display: inline-block;
     margin: 0 5px 0 5px;
 }
+.card .week {
+    color: var(--Primary-Color);
+    font-weight: bold;
+}
 .card a {
     color: var(--Primary-Color);
     font-family: var(--Main-Content-Font);
