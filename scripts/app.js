@@ -23,9 +23,8 @@ modeButton.addEventListener("click", () => {
     if (modeButton.textContent.includes("🕶️")){
         body.style.background = background;
         body.style.color = "black";
-        cardLinks.style.setProperty('--Fourth-Color', darkColor2)
+        cardLinks.style.setProperty('--Fourth-Color', "#fff")
         weatherCard.style.setProperty('--Secondary-Color', darkColor2)
-        modeButton.style.background = darkColor2;
         modeButton.textContent = "🔆";
     }
     else {
@@ -34,7 +33,6 @@ modeButton.addEventListener("click", () => {
         cardLinks.style.setProperty('--Fourth-Color', "#EABA6B")
         weatherCard.style.setProperty('--Secondary-Color', "#4F5165")
         modeButton.textContent = "🕶️";
-        modeButton.style.background = "#fff";
     }
 })
 
