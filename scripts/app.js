@@ -4,9 +4,38 @@ const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const menuButton = document.querySelector("#menu")
 const navMenu = document.querySelector(".nav-menu")
 
+// Dark Mode
+const modeButton = document.querySelector("#mode");
+const body = document.querySelector("body");
+const weatherCard = document.querySelector(".weather");
+const cardLinks = document.querySelector(".card");
+const background = "#C4CBCA"
+const darkColor1 = "#2A1E5C"
+const darkColor2 = "#4E5283"
+
+
 menuButton.addEventListener("click", () => {
     navMenu.classList.toggle('open');
     menuButton.classList.toggle('open');
+})
+
+modeButton.addEventListener("click", () => {
+    if (modeButton.textContent.includes("🕶️")){
+        body.style.background = background;
+        body.style.color = "black";
+        cardLinks.style.setProperty('--Fourth-Color', darkColor2)
+        weatherCard.style.setProperty('--Secondary-Color', darkColor2)
+        modeButton.style.background = darkColor2;
+        modeButton.textContent = "🔆";
+    }
+    else {
+        body.style.background = "#fff";
+		body.style.color = "#000";
+        cardLinks.style.setProperty('--Fourth-Color', "#EABA6B")
+        weatherCard.style.setProperty('--Secondary-Color', "#4F5165")
+        modeButton.textContent = "🕶️";
+        modeButton.style.background = "#fff";
+    }
 })
 
 async function checkWeather(city) {    

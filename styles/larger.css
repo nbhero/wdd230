@@ -6,6 +6,7 @@
     --Secondary-Color: #4F5165; /* Davy's Gray */
     --Third-Color: #293132; /* Gun Metal */
     --Fourth-Color: #EABA6B; /* Earth Yellow */
+    --Fifth-Color: #fff; /* White */
     /* Font */
     --Profile-Font: "Open Sans", sans-serif;
     --Navigation-Font: "Jersey 10", sans-serif;
@@ -65,6 +66,14 @@ nav a {
 nav a:hover {
     background-color: var(--Primary-Color);
     color: var(--Fourth-Color);
+}
+#mode {
+    background: var(--Fifth-Color);
+    cursor: pointer;
+}
+#mode svg {
+    width: 10px;
+    margin: 0 auto;
 }
 main {
     display: grid;
