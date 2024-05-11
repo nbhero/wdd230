@@ -4,6 +4,21 @@ const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const menuButton = document.querySelector("#menu")
 const navMenu = document.querySelector(".nav-menu")
 
+const visitsDisplay = document.querySelector('.visits');
+
+let numberOfVisits = Number(window.localStorage.getItem('numVisits-ls')) || 0;
+
+if (numberOfVisits !== 0) {
+    visitsDisplay.textContent = numberOfVisits;
+}
+else {
+    visitsDisplay.textContent = `It's your first time here! Welcome to my website! 🥳`;
+}
+
+numberOfVisits++;
+
+localStorage.setItem('numVisits-ls', numberOfVisits);
+
 // Dark Mode
 const modeButton = document.querySelector("#mode");
 const body = document.querySelector("body");
