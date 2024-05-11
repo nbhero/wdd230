@@ -173,7 +173,17 @@ main h1 {
 span {
     color: white;
 }
-
+.maps {
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid var(--Fourth-Color);
+    border-radius: 10px;
+    height: 150px;
+}
+.maps iframe {
+    width: 100%;
+    height: auto;
+}
 footer {
     background-color: var(--Primary-Color);
     padding: 1.5rem;
