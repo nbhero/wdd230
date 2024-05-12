@@ -223,9 +223,11 @@ footer a:hover {
     display: grid;
     background-color: #155b7e;
 }
+
 .heading {
     align-self: center;
 }
+
 .heading-2 {
     align-self: start;
 }
@@ -246,6 +248,13 @@ footer a:hover {
 
 #discover-content {
     margin: 0 auto;
+}
+
+#discover-content h1 {
+    font-family: var(--Main-Font);
+    text-align: center;
+    background-color: var(--Primary-Color);
+    color: var(--Fourth-Color);
 }
 
 #calendar {
