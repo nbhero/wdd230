@@ -32,9 +32,11 @@ header {
 header button {
     align-self: center;
 }
+
 .city {
     text-align: center;
 }
+
 #mode {
     cursor: pointer;
 }
@@ -82,9 +84,11 @@ header button {
 #hamburguer-menu {
     display: none;
 }
+
 #hamburguer-menu::before {
     content: "☰";
 }
+
 #hamburguer-menu.open::before {
     content: "X";
 }
@@ -140,7 +144,7 @@ header button {
     font-family: var(--Main-Font);
     background-color: var(--Primary-Color);
     grid-row: 3/3;
-    grid-column: 3/6;
+    grid-column: 3/5;
     margin-bottom: 20px;
     border: 2px solid var(--Third-Color);
     border-radius: 10px;
@@ -186,11 +190,9 @@ header button {
 
 footer {
     background-color: var(--Footer-Background);
-    display: grid;
-    grid-template-columns: .2fr 1fr 1fr 1fr .2fr;
-    column-gap: 10px;
     padding: 2rem;
     user-select: none;
+    color: #fff;
 }
 
 footer li {
@@ -204,4 +206,56 @@ footer a {
 
 footer a:hover {
     color: var(--Fourth-Color);
+}
+
+#website-name {
+    color: var(--Secondary-Color);
+}
+
+/* Discover */
+#discover-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr .2fr;
+    grid-template-rows: auto;
+}
+
+#side-bar {
+    display: grid;
+    background-color: #155b7e;
+}
+.heading {
+    align-self: center;
+}
+.heading-2 {
+    align-self: start;
+}
+
+#side-bar h2 {
+    background-color: #4F5165;
+    text-align: center;
+    color: var(--TextColorOnDarkBG);
+    font-family: var(--Main-Font);
+}
+
+#side-bar p {
+    background-color: var(--Secondary-Color);
+    color: var(--Footer-Background);
+    padding: 5px;
+    font-family: var(--Secondary-Font);
+}
+
+#discover-content {
+    margin: 0 auto;
+}
+
+#calendar {
+    align-self: start;
+    border: 2px solid var(--TextColorOnDarkBG);
+    height: inherit;
+}
+
+.discover-images img:hover {
+    border: 2px solid var(--Footer-Background);
+    border-radius: 3px;
+    opacity: .7;
 }
