@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Activity - Form</title>
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+<body>
+    <main>
+        <form method="get" action="record.html" class="main-form">
+
+            <label>Username <input type="text" name="username" id="username" required></label>
+            <label>Password <input type="password" name="password" id="password" required></label>
+            <label>Confirm Password <input type="password" name="password" id="re-password" required></label>
+            <label>Email <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address" required><code></code></label>
+            <!-- Page Rating -->
+            <label>Please rate us!</label>
+            <div class="rating">
+                <input type="radio" name="stars" id="tenthstar" value="10"><label for="tenthstar"></label>
+                <input type="radio" name="stars" id="ninthstar" value="9"><label for="ninthstar"></label>
+                <input type="radio" name="stars" id="eighthstar" value="8"><label for="eighthstar"></label>
+                <input type="radio" name="stars" id="seventhstar" value="7"><label for="seventhstar"></label>
+                <input type="radio" name="stars" id="sixthstar" value="6"><label for="sixthstar"></label>
+                <input type="radio" name="stars" id="fifthstar" value="5"><label for="fifthstar"></label>
+                <input type="radio" name="stars" id="fourthstar" value="4"><label for="fourthstar"></label>
+                <input type="radio" name="stars" id="thirdstar" value="3"><label for="thirdstar"></label>
+                <input type="radio" name="stars" id="secondstar" value="2"><label for="secondstar"></label>
+                <input type="radio" name="stars" id="firststar" value="1"><label for="firststar"></label>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </main>
+</body>
+</html>
