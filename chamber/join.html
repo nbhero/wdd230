@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bruno Rafael Torres Candido">
     <meta property="og:title" content="Homepage - California's Chamber of Commerce">
     <meta name="description"
         content="Welcome to the California Chamber of Commerce website, your go-to resource for businesses statewide. Explore advocacy efforts, find valuable tools, network with fellow professionals, and stay updated on the latest news and events shaping California's vibrant business landscape.">
@@ -67,8 +68,7 @@
 
             </div>
             <div>
-                <label for="last_name">Last Name:<input type="text" id="last_name" name="last_name"
-                        required></label>
+                <label for="last_name">Last Name:<input type="text" id="last_name" name="last_name" required></label>
 
             </div>
             <div>
@@ -104,6 +104,10 @@
             <div>
                 <label for="description">Business/Organization Description:</label>
                 <textarea id="description" name="description"></textarea>
+            </div>
+            <div style="display: none;">
+                <label for="timestamp">Timestamp:</label>
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
             </div>
             <div>
                 <input type="submit" value="Send My Application">
