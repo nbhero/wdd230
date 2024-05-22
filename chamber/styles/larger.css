@@ -13,6 +13,11 @@
     /* Font */
     --Main-Font: "Kanit", sans-serif;
     --Secondary-Font: "Roboto", sans-serif;
+
+    /* ------- Member Benefits ------- */
+    --Bronze-MB: #CB8C47;
+    --Silver-MB: #E5E5E5;
+    --Gold-MB: #FFD60A;
 }
 
 * {
@@ -267,4 +272,111 @@ footer a:hover {
     border: 2px solid var(--Footer-Background);
     border-radius: 3px;
     opacity: .7;
+}
+
+/* ---------- JOIN PAGE ---------- */
+/* ---------- FORM ---------- */
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Membership Level Benefits Section */
+.membership-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--Footer-Background);
+}
+
+.membership-container h2 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--Secondary-Color);
+}
+
+.membership-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membership-container li {
+    margin-bottom: 10px;
+}
+
+.membership-benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.membership-benefits fieldset {
+    margin: 0 10px 0 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.default legend {
+    color: var(--Secondary-Color);
+}
+
+.bronze legend {
+    color: var(--Bronze-MB);
+}
+
+.silver legend {
+    color: var(--Silver-MB);
+}
+
+.gold legend {
+    color: var(--Gold-MB);
 }

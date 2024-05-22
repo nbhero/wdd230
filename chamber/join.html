@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bruno Rafael Torres Candido">
+    <meta property="og:title" content="Homepage - California's Chamber of Commerce">
+    <meta name="description"
+        content="Welcome to the California Chamber of Commerce website, your go-to resource for businesses statewide. Explore advocacy efforts, find valuable tools, network with fellow professionals, and stay updated on the latest news and events shaping California's vibrant business landscape.">
+    <title>California's Chamber of Commerce</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <span id="web-name">Cali's Chamber</span>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./discover.html">Discover</a></li>
+                <li><a href="./join.html">Join Us</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+        <button id="mode"></button>
+        <button id="hamburguer-menu" title="menu"></button>
+    </header>
+    <main>
+        <!-- Membership Level Benefits -->
+        <div class="membership-container">
+            <h2>Membership Level Benefits</h2>
+            <div class="membership-benefits">
+                <fieldset class="default">
+                    <legend>NP Membership</legend>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis recusandae laudantium voluptate obcaecati cumque illum placeat tenetur vel excepturi itaque repudiandae labore quasi ea iste, est alias ex omnis accusamus!</p>
+                </fieldset>
+                <fieldset class="bronze">
+                    <legend>Bronze Membership</legend>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit hic veniam possimus saepe quae et vero eos, blanditiis placeat eligendi sunt debitis! Id a veritatis repellendus aspernatur aperiam nam suscipit.</p>
+                </fieldset>
+                <fieldset class="silver">
+                    <legend>Silver Membership</legend>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, accusamus maiores pariatur numquam similique repellendus. Repellat cumque tenetur qui aperiam laudantium ullam praesentium necessitatibus eveniet impedit dolores? Sunt, nobis commodi!</p>
+                </fieldset>
+                <fieldset class="gold">
+                    <legend>Gold Membership</legend>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi iusto provident magnam incidunt illo esse eveniet placeat culpa dicta facere, aliquam asperiores voluptates neque maiores maxime! Consequatur quisquam obcaecati quam!</p>
+                </fieldset>
+            </div>
+        </div>
+        <h1>Membership Application Form</h1>
+        <form action="thankyou.html" method="get" class="join-form">
+            <div>
+                <label for="first_name">Applicant's First Name:<input type="text" id="first_name" name="first_name"
+                        required></label>
+
+            </div>
+            <div>
+                <label for="last_name">Applicant's Last Name:<input type="text" id="last_name" name="last_name"
+                        required></label>
+
+            </div>
+            <div>
+                <label for="position">Applicant's Title/Position:<input type="text" id="position" name="position"
+                        pattern="[a-zA-Z\s-]{7,}"
+                        title="Please enter at least seven characters consisting of alphabets, spaces, or hyphens."
+                        required></label>
+
+            </div>
+            <div>
+                <label for="email">Email Address:<input type="email" id="email" name="email"
+                        placeholder="example@example.com" required></label>
+
+            </div>
+            <div>
+                <label for="phone">Mobile Phone Number:<input type="tel" id="phone" name="phone" required></label>
+
+            </div>
+            <div>
+                <label for="organization">Business/Organization Name:<input type="text" id="organization"
+                        name="organization" required></label>
+
+            </div>
+            <div>
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership">
+                    <option value="NP Membership">NP Membership (Free)</option>
+                    <option value="Bronze Membership">Bronze Membership</option>
+                    <option value="Silver Membership">Silver Membership</option>
+                    <option value="Gold Membership">Gold Membership</option>
+                </select>
+            </div>
+            <div>
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div style="display: none;">
+                <label for="timestamp">Timestamp:</label>
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
+            </div>
+            <div>
+                <input type="submit" value="Submit Application">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="../index.html">Voltar</a></li>
+        </ul>
+    </footer>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
