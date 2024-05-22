@@ -336,7 +336,7 @@ input[type="submit"]:hover {
 }
 
 .membership-container h2 {
-    margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
     color: var(--Secondary-Color);
 }
@@ -368,15 +368,27 @@ legend {
 .default legend {
     color: var(--Secondary-Color);
 }
+.default {
+    border: 1px solid var(--Secondary-Color);
+}
 
 .bronze legend {
     color: var(--Bronze-MB);
+}
+.bronze {
+    border: 1px solid var(--Bronze-MB);
 }
 
 .silver legend {
     color: var(--Silver-MB);
 }
+.silver {
+    border: 1px solid var(--Silver-MB);
+}
 
 .gold legend {
     color: var(--Gold-MB);
+}
+.gold {
+    border: 1px solid var(--Gold-MB);
 }
