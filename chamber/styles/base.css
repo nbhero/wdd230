@@ -41,4 +41,8 @@
     #weather-app {
         height: 10vh;
     }
+
+    .membership-benefits {
+        display: block;
+    }
 }
