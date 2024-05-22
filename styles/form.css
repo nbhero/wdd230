@@ -1,13 +1,13 @@
-:root
-{
-   --Primary-color: #efe;
-   --Secondary-color: #2e2e2e;
-   --Star-color: gold;
+:root {
+    --Primary-color: #efe;
+    --Secondary-color: #2e2e2e;
+    --Star-color: gold;
 }
-body
-{
+
+body {
     background-color: var(--Secondary-color);
 }
+
 .main-form {
     background-color: var(--Primary-color);
     width: 80%;
@@ -50,40 +50,25 @@ body
 }
 
 /* -------------- RATING -------------- */
-.rating input[type="radio"]
-{
-    display: none;
-    position: relative;
-    caret-color: rgba(0, 0, 0, 0);
-}
-.rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-bottom: 10px;
+#r {
+    width: 180px;
+    margin-bottom: 0;
 }
 
-.rating > label {
-    color: var(--Star-color);
-    width: 30px;
-    height: 30px;
+#rangevalue {
     font-size: 2rem;
-    display: flex;
-    margin: 0 5px 0 5px;
-    align-items: center;
-    caret-color: rgba(0, 0, 0, 0);
-}
-.rating > label::before
-{
-    content: "\2606";
-}
-.rating input:checked ~ label::before
-{
-    content: "\2605";
+    color: navy;
 }
 
-.rating>label:hover {
-    color: var(--Secondary-color);
+#rangevalues {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#rangevalues option {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
 }
 
 /* -------------- Button -------------- */
