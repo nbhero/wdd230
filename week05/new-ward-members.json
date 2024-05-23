@@ -1,0 +1,58 @@
+[
+    {
+        "family_name": "Smith",
+        "move_in_date": "2023-06-15",
+        "number_of_people": 4,
+        "visited_by_bishopric": true,
+        "family_members": [
+            {
+                "name": "John Smith",
+                "gender": "male",
+                "birthdate": "1990-05-10"
+            },
+            {
+                "name": "Mary Smith",
+                "gender": "female",
+                "birthdate": "1992-08-20"
+            },
+            {
+                "name": "Emma Smith",
+                "gender": "female",
+                "birthdate": "2015-03-12"
+            },
+            {
+                "name": "Michael Smith",
+                "gender": "male",
+                "birthdate": "2018-11-30"
+            }
+        ]
+    },
+    {
+        "family_name": "Torres",
+        "move_in_date": "2020-11-15",
+        "number_of_people": 4,
+        "visited_by_bishopric": true,
+        "family_members": [
+            {
+                "name": "Bruno Torres",
+                "gender": "male",
+                "birthdate": "1997-12-04"
+            },
+            {
+                "name": "Alix Torres",
+                "gender": "female",
+                "birthdate": "1995-07-08"
+            },
+            {
+                "name": "Diana Torres",
+                "gender": "female",
+                "birthdate": "2022-04-04"
+            },
+            {
+                "name": "Amon Torres",
+                "gender": "male",
+                "birthdate": "2014-06-28"
+            }
+        ]
+    }
+]
