@@ -1,0 +1,48 @@
+/* Poetsen One */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+:root {
+    --background-color: #b9b9cc;
+    --second-color: #424242;
+    --primary-font: "Poetsen One", sans-serif;
+}
+
+header {
+    width: 100%;
+}
+header h1 {
+    font-family: var(--primary-font);
+    background-color: #e6e6e6;
+    padding: 2rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    color: #4d4d96;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#cards section {
+    border: 1px solid #4d4d96;
+}
+
+#cards h2 {
+    text-align: center;
+    font-family: var(--primary-font);
+    color: #4d4d96;
+}
+
+#cards p {
+    text-align: center;
+}
