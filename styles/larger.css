@@ -170,7 +170,7 @@ main h1 {
 }
 
 .weather h3,
-span {
+span, p {
     color: white;
 }
 .maps {

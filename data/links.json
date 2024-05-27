@@ -1,0 +1,71 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {
+            "url":"./week01/holygrail.html",
+            "title":"HG Layout"
+          },
+          {
+            "url":"week01/media-query.html",
+            "title":"mQueries"
+          }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url":"https://codepen.io/Bruno-Torres-the-flexboxer/pen/bGJyzBR",
+            "title":"My CodePen"
+          },
+          {
+            "url":"./week02/design.html",
+            "title":"Web Design Principles"
+          },
+          {
+            "url":"./week02/bom.html",
+            "title":"Dom Manipulation"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url":"./week03/images/landscape.webp",
+            "title":"WebP"
+          },
+          {
+            "url":"./week03/lazyload.html",
+            "title":"LazyLoad"
+          },
+          {
+            "url":"./week03/bom.html",
+            "title":"BOM Activity"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url":"https://codepen.io/Bruno-Torres-the-flexboxer/pen/wvbMPBR",
+            "title":"CSS Pseudo Classes"
+          },
+          {
+            "url":"./week04/images/w3activity.png",
+            "title":"CSS Combinators"
+          },
+          {
+            "url":"./week04/tablebuild.html",
+            "title":"Tables for Data Presentation"
+          },
+          {
+            "url":"./form.html",
+            "title":"Team Activity - Form"
+          }
+        ]
+      }]
+}
