@@ -30,48 +30,30 @@ const darkColor1 = "#2A1E5C";
 const darkColor2 = "#4E5283";
 
 // ---------- Links ----------
-async function getLinks() {
-    const linksPath = '../data/links.json';
+async function getLinks(week) {
+    const linksPath = 'https://nbhero.github.io/wdd230/data/links.json';
     const linkResp = await fetch(linksPath);
     var data = await linkResp.json();
     // console.log(data);
-    // displayWeeks(data.weeks);
     
-    let loop = true;
-    while (loop) {
-        let i = 0;
-        var links = [data];
-        console.log(links);
-        links.forEach(link => {   
-            links.weeks[i].links;
-            let card = document.querySelector('.card').firstElementChild;
-            let a = document.createElement('a');
     
-            console.log(link.title);
-            console.log(link.url);    
-            i++;
-        });
-        
-        loop = false;
-    }
+    // let links = data.weeks[0];
     
     // console.log(links);
+    var data2 = data.weeks[week];
+    // console.log(links);
+    
+    for (link in data2) {
+        
+        // console.log(data2.links);
+        console.log(link);
 
+        week++;
+    }
     
     
 }
-getLinks();
-
-// const displayWeeks = (weeks) => {
-//     weeks.forEach((week) => {
-//         let card = document.querySelector('.card').firstElementChild;
-//         let list = document.createElement('li');
-//         let link = document.createElement('a');
-
-//         list.textContent = week;
-//         card.appendChild(list);
-//     });
-// }
+getLinks(0);
 
 
 menuButton.addEventListener("click", () => {
