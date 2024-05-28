@@ -392,3 +392,86 @@ legend {
 .gold {
     border: 1px solid var(--Gold-MB);
 }
+
+/* ---------- Directory ---------- */
+.directory-container {
+    padding: 20px;
+}
+
+.menu {
+    margin: 1rem auto;
+	border: 1px solid var(--Primary-Color);
+    border-radius: 4px;
+	padding: 0.5rem;
+	background-color: var(--Footer-Background);
+	text-align: center;
+}
+.menu button {
+    padding: .5rem;
+	font-weight: 700;
+}
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.members-container section {
+    border: 2px solid var(--Primary-Color);
+    border-radius: 4px;
+    background-color: var(--Footer-Background);
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.members-container h2 {
+    color: var(--Secondary-Color);
+    font-family: var(--Main-Font);
+}
+
+.members-container p {
+    color: var(--TextColorOnDarkBG);
+    font-family: var(--Secondary-Font);
+}
+
+.members-container a {
+    color: var(--Bronze-MB);
+    font-family: var(--Main-Font);
+}
+
+.members-container a:hover {
+    color: var(--Secondary-Color);
+}
+
+.list {
+    display: flex;
+	flex-direction: column;
+}
+
+.list section {
+    display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.list section:nth-child(even) {
+	background-color: var(--Primary-Color);
+}

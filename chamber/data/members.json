@@ -1,0 +1,29 @@
+{
+    "members": [
+      {
+        "name": "Barry Allen",
+        "address": "123 Main St, Cityville",
+        "phone": "+1234567890",
+        "website": "http://www.example.com",
+        "image": "../chamber/images/avatar.png",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "John Diggle",
+        "address": "456 Elm St, Townsville",
+        "phone": "+1987654321",
+        "website": "http://www.sample.com",
+        "image": "../chamber/images/avatar.png",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Oliver Queen",
+        "address": "789 Oak St, Villagetown",
+        "phone": "+1122334455",
+        "website": "http://www.demo.com",
+        "image": "../chamber/images/avatar.png",
+        "membership_level": "Bronze"
+      }
+    ]
+  }
+  

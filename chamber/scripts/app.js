@@ -7,6 +7,71 @@ const navMenu = document.querySelector(".nav-menu");
 const visitsDisplay = document.querySelector(".visits");
 let numberOfVisits = Number(window.localStorage.getItem('numVisits-ls')) || 0;
 
+const membersCont = document.querySelector('.members-container');
+const url = '../chamber/data/members.json';
+
+async function getMemberData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+
+    displayMembers(data.members);
+}
+getMemberData();
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector(".members-container");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
+
+
+function displayMembers(members) {
+    members.forEach((member) => {
+        let card = document.createElement('section');
+        let name = document.createElement('h2');
+        let address = document.createElement('p');
+        let phoneNumber = document.createElement('p');
+        var website = document.createElement('a');
+        let image = document.createElement('img');
+        let membershipLevel = document.createElement('h3');
+
+        name.textContent = `${member.name}`;
+        address.textContent = `${member.address}`;
+        phoneNumber.textContent = `${member.phone}`;
+        website.setAttribute('href', member.website);
+        website.innerHTML = member.website;
+        membershipLevel.textContent = `${member.membership_level}`;
+        image.setAttribute('src', member.image);
+        image.setAttribute('alt', member.name);
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '150');
+        image.setAttribute('height', '150');
+
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phoneNumber);
+        card.appendChild(website);
+        card.appendChild(membershipLevel);
+
+        membersCont.appendChild(card);
+    });
+}
+
 // Trying the function
 function getVisitMessage() {
     const lastVisit = localStorage.getItem("lastVisit");
@@ -50,3 +115,4 @@ menuButton.addEventListener('click', () => {
     navMenu.classList.toggle('open');
     menuButton.classList.toggle('open');
 })
+
