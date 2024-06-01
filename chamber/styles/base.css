@@ -3,6 +3,9 @@
         display: flex;
         text-align: center;
     }
+    #mode {
+        font-size: 20px;
+    }
     #hamburguer-menu {
         display: block;
     }
@@ -22,27 +25,20 @@
     #main-content {
         display: block;
     }
-    
-    #main-image {
-        width: 100%;
-        height: 20vh;
-        margin: 0;
-    }
+
     #main-image img {
         width: 100%;
-        height: 20vh;
-    }
-    .image-1, .image-2, .image-3 {
-        width: 100%;
-        text-align: center;
-        margin: 20px 0 20px 0;
+        height: 200px;
     }
     
-    #weather-app {
-        height: 10vh;
+    #info-container {
+        display: flex;
+        flex-direction: column;
     }
 
-    .membership-benefits {
-        display: block;
+    .image-container {
+        width: 100%;
+        margin: 0 0 20px 0;
     }
+    
 }

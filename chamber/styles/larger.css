@@ -46,11 +46,6 @@ header button {
     cursor: pointer;
 }
 
-#mode svg {
-    width: 1.2rem;
-    text-align: center;
-}
-
 #web-name {
     font-family: var(--Main-Font);
     font-size: 1.7rem;
@@ -79,6 +74,7 @@ header button {
 
 .nav-menu a:hover {
     color: var(--Fourth-Color);
+    transition: 1.2s;
 }
 
 #mode {
@@ -198,7 +194,8 @@ p {
     padding: 10px;
 }
 
-#weather-app h3, p {
+#weather-app h3,
+p {
     color: white;
 }
 
@@ -236,6 +233,7 @@ p {
 
 #newsletter-form h3 {
     text-align: center;
+    margin: 0 0 20px 0;
     color: var(--TextColorOnDarkBG);
 }
 
@@ -249,7 +247,7 @@ p {
     width: 100%;
     padding: 15px;
     margin: 8px 0;
-    background-color: var(--Footer-Background);
+    background-color: var(--Secondary-Color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -258,8 +256,8 @@ p {
 }
 
 #newsletter-form button:hover {
-    background-color: var(--TextColorOnDarkBG);
-    color: var(--Footer-Background);
+    background-color: green;
+    transition: 1.2s;
 }
 
 footer {
@@ -419,6 +417,10 @@ input[type="submit"]:hover {
 
 .membership-container li {
     margin-bottom: 10px;
+}
+
+.membership-container fieldset {
+    width: 100%;
 }
 
 .membership-benefits {

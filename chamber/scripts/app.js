@@ -51,11 +51,22 @@ const modeButton = document.querySelector('#mode');
 const body = document.querySelector('body')
 const newsletter = document.querySelector('#newsletter-form form')
 const newsletterLabel = document.querySelector('#newsletter-form')
+const form = document.querySelector('form');
 
 modeButton.addEventListener('click', () => {
     if (modeButton.textContent.includes('☀')) {
         body.style.background = '#14213D';
         body.style.color = 'white';
+        form.style.background = 'black';
+        modeButton.style.background = 'gray';
+        modeButton.textContent = '🌑';
+    }
+    else {
+        body.style.background = 'white';
+        body.style.color = 'black';
+        form.style.background = '#f9f9f9';
+        modeButton.style.background = '#00ABE7';
+        modeButton.textContent = '☀';
     }
 })
 
