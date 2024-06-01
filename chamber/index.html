@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bruno Rafael Torres Candido">
     <meta property="og:title" content="Homepage - California's Chamber of Commerce">
-    <meta name="description" content="Welcome to the California Chamber of Commerce website, your go-to resource for businesses statewide. Explore advocacy efforts, find valuable tools, network with fellow professionals, and stay updated on the latest news and events shaping California's vibrant business landscape.">
+    <meta name="description"
+        content="Welcome to the California Chamber of Commerce website, your go-to resource for businesses statewide. Explore advocacy efforts, find valuable tools, network with fellow professionals, and stay updated on the latest news and events shaping California's vibrant business landscape.">
     <title>California's Chamber of Commerce</title>
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/larger.css">
@@ -25,35 +26,49 @@
                 <li><a href="./directory.html">Directory</a></li>
             </ul>
         </nav>
-        <button id="mode"></button>
+        <button id="mode">☀</button>
         <button id="hamburguer-menu" title="menu"></button>
     </header>
     <main>
-        <h1 class="city">California's Chamber of Commerce</h1>
+        <h1 class="city-name">California's Chamber of Commerce</h1>
         <section id="main-content">
             <div id="main-image">
-                <img src="https://picsum.photos/800/330" alt="imagem">
+                <img src="./images/banner.webp" alt="imagem">
             </div>
-            <div class="image-1">
-                <h3>Name</h3>
-                <img src="https://picsum.photos/300/150" alt="imagem">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu velit, ornare quis iaculis vel, lacinia nec lacus. Curabitur nec risus ac ex mollis viverra. Morbi lobortis tempus rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum malesuada placerat. Pellentesque quis purus augue. Quisque eu rutrum diam, ac porta nunc. Aenean suscipit leo eu lacus luctus, id dictum lacus auctor. Suspendisse laoreet nunc varius nibh vestibulum congue. Fusce fermentum, justo id lobortis ultricies, orci nulla condimentum elit, hendrerit commodo nulla velit et ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per.</p>
-                <button>Explore</button>
-            </div>
-            <div class="image-2">
-                <h3>Name</h3>
-                <img src="https://picsum.photos/300/150" alt="imagem">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu velit, ornare quis iaculis vel, lacinia nec lacus. Curabitur nec risus ac ex mollis viverra. Morbi lobortis tempus rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum malesuada placerat. Pellentesque quis purus augue. Quisque eu rutrum diam, ac porta nunc. Aenean suscipit leo eu lacus luctus, id dictum lacus auctor. Suspendisse laoreet nunc varius nibh vestibulum congue. Fusce fermentum, justo id lobortis ultricies, orci nulla condimentum elit, hendrerit commodo nulla velit et ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per.</p>
-                <button>Explore</button>
-            </div>
-            <div class="image-3">
-                <h3>Name</h3>
-                <img src="https://picsum.photos/300/150" alt="imagem">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu velit, ornare quis iaculis vel, lacinia nec lacus. Curabitur nec risus ac ex mollis viverra. Morbi lobortis tempus rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer bibendum malesuada placerat. Pellentesque quis purus augue. Quisque eu rutrum diam, ac porta nunc. Aenean suscipit leo eu lacus luctus, id dictum lacus auctor. Suspendisse laoreet nunc varius nibh vestibulum congue. Fusce fermentum, justo id lobortis ultricies, orci nulla condimentum elit, hendrerit commodo nulla velit et ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per.</p>
-                <button>Explore</button>
-            </div>
+            <section id="info-container">
+                <div class="image-container">
+                    <h3>Compliance</h3>
+                    <img src="./images/compliance-hero-bnr.webp" alt="imagem">
+                    <p>As the largest broad-based business advocate to government in California, we give you a voice in shaping laws and work on policies that strengthen the state's economy.</p>
+                        <p>Through our advocacy work, members have a strong voice at the state Capitol. Together, we help California to be the best place to live, work and do business.</p>
+                    <button>Explore</button>
+                </div>
+                <div class="image-container">
+                    <h3>Advocacy</h3>
+                    <img src="./images/advocacy-hero-bnr.webp" alt="imagem">
+                    <p>Running a business is hard enough and when it comes to your biggest resource – your employees – you need a partner who can be your single source of truth for compliance solutions and training.</p>
+                        <p>From compliance posters to employee handbooks and more, we have got you covered, so you can focus on your passion – your business!</p>
+                    <button>Explore</button>
+                </div>
+                <div class="image-container">
+                    <h3>Name</h3>
+                    <img src="./images/economy.webp" alt="imagem">
+                    <p>The United States has the most dynamic, diverse, and resilient economy in the world. That momentum comes from people pursuing their dreams—from start-up entrepreneurs and small business owners to the leaders and workers of mid-cap companies and large global corporations, and everyone in between.</p> 
+                    <p>When everyone works together to drive our economy forward, solutions are created, communities are strengthened, and opportunities emerge for all.</p>
+                    <button>Explore</button>
+                </div>
+            </section>
             <div id="weather-app">
-                <p>Weather App</p>
+                <p>Information</p>
+                <img src="#" alt="weather-icon" class="weather-icon">
+                <h3 class="temp"></h3>
+                <p class="description"></p>
+                <span class="city"></span>
+                <span class="country"></span>
+                <p>
+                    <span class="label">Number of Visits: </span>
+                    <span class="visits"></span>
+                </p>
             </div>
             <div id="newsletter-form">
                 <h3>NewsLetter Form</h3>

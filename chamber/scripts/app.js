@@ -1,14 +1,63 @@
-const modeIcon = document.querySelector('#mode');
-modeIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>';
-
 const menuButton = document.querySelector('#hamburguer-menu');
 const navMenu = document.querySelector(".nav-menu");
 
-const visitsDisplay = document.querySelector(".visits");
-let numberOfVisits = Number(window.localStorage.getItem('numVisits-ls')) || 0;
+// -------------------- Weather App --------------------
+const apiKey = "a209ea9d26b2c89a9c0c101eebef022c";
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const weatherDescription = document.querySelector(".description");
 
 const membersCont = document.querySelector('.members-container');
 const url = '../chamber/data/members.json';
+
+async function checkWeather(city) {    
+    const response = await fetch(apiURL + city + `&appid=${apiKey}`);
+    var data = await response.json();
+    console.log(data);
+
+    const weatherIcon = document.querySelector(".weather-icon")
+
+    if (response.status == 404) {
+        document.querySelector(".weather").style.display = "none";
+    }
+    else {
+        document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)} °C`;
+        weatherDescription.innerHTML = data.weather[0].description;
+        document.querySelector(".city").innerHTML = data.name;
+
+        if(data.weather[0].main == "Clear") {
+            weatherIcon.src = "images/sunny_white.png"
+        }
+        else if(data.weather[0].main == "Clouds") {
+            weatherIcon.src = "images/cloudy_white.png"
+        }
+        else if(data.weather[0].main == "Rain") {
+            weatherIcon.src = "images/rainny_white.png"
+        }
+        else if(data.weather[0].main == "Mist") {
+            weatherIcon.src = "images/mist_white.png"
+        }
+        else if(data.weather[0].main == "Drizzle") {
+            weatherIcon.src = "images/drizzle_white.png"
+        }
+
+        document.querySelector(".weather").style.display = "block";
+    }
+}
+
+checkWeather("California");
+
+// -------------------- DarkMode --------------------
+const modeButton = document.querySelector('#mode');
+const body = document.querySelector('body')
+const newsletter = document.querySelector('#newsletter-form form')
+const newsletterLabel = document.querySelector('#newsletter-form')
+
+modeButton.addEventListener('click', () => {
+    if (modeButton.textContent.includes('☀')) {
+        body.style.background = '#14213D';
+        body.style.color = 'white';
+    }
+})
 
 async function getMemberData() {
     const response = await fetch(url);
@@ -23,21 +72,17 @@ const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector(".members-container");
 
-// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-
 gridbutton.addEventListener("click", () => {
-	// example using arrow function
-	display.classList.add("grid");
-	display.classList.remove("list");
+    display.classList.add("grid");
+    display.classList.remove("list");
 });
 
-listbutton.addEventListener("click", showList); // example using defined function
+listbutton.addEventListener("click", showList);
 
 function showList() {
-	display.classList.add("list");
-	display.classList.remove("grid");
+    display.classList.add("list");
+    display.classList.remove("grid");
 }
-
 
 function displayMembers(members) {
     members.forEach((member) => {
@@ -71,45 +116,6 @@ function displayMembers(members) {
         membersCont.appendChild(card);
     });
 }
-
-// Trying the function
-function getVisitMessage() {
-    const lastVisit = localStorage.getItem("lastVisit");
-    const msToDays = 84600000;
-    if (!lastVisit) {
-        return "Welcome";
-    }
-
-    const lastVisitDate = new Date(lastVisit);
-    const now = new Date();
-    const deltaDays = Math.floor((now - lastVisitDate) / msToDays);
-    console.log(deltaDays)
-
-    if (deltaDays === 0) {
-        return "Back so soon? Awesome!";
-    }
-    else {
-        const message = `You last visited ${deltaDays} day${deltaDays > 1 ? 's' : ''}`;
-        return message;
-    }
-}
-
-function setLastVisit() {
-    localStorage.setItem("lastVisit", new Date().toISOString());
-}
-const visitMessage = document.querySelector("#visit-message");
-visitMessage.textContent = getVisitMessage();
-setLastVisit();
-// End of Code
-if (numberOfVisits !== 0) {
-    visitsDisplay.textContent = numberOfVisits;
-}
-else {
-    visitsDisplay.textContent = `Welcome to California's Chamber of Commerce!`;
-}
-
-numberOfVisits++;
-localStorage.setItem('numVisits-ls', numberOfVisits);
 
 menuButton.addEventListener('click', () => {
     navMenu.classList.toggle('open');

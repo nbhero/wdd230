@@ -82,8 +82,10 @@ header button {
 }
 
 #mode {
-    width: 50px;
-    height: 50px;
+    border-radius: 10px;
+    background-color: #00ABE7;
+    font-size: 26px;
+    color: yellow;
 }
 
 #hamburguer-menu {
@@ -107,30 +109,83 @@ header button {
 }
 
 #main-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 3rem;
     height: 330px;
-    width: 800px;
-    background-color: var(--Secondary-Color);
+    width: 100%;
     grid-column: 1/6;
-    justify-self: center;
 }
 
-.image-1 {
-    background-color: var(--TextColorOnDarkBG);
-    grid-column: 2/3;
-    display: block;
+#main-image img {
+    height: 330px;
+    width: 80%;
+    border: 1px solid grey;
+}
+
+/* ------- Block of Images ------- */
+#info-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    grid-column: 2/5;
+    width: 100%;
+}
+
+.image-container {
+    background-color: var(--Primary-Color);
+
+    border: 1px solid var(--Primary-Color);
+    width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 150px;
+}
+
+.image h3 {
+    font-family: var(--Main-Font);
+}
+
+.image-container h3,
+p {
+    text-align: center;
+    margin: 10px;
+    color: var(--TextColorOnDarkBG);
+}
+
+.image-container button {
+    background-color: var(--Fourth-Color);
+    font-weight: bold;
+    font-family: var(--Main-Font);
+    border: none;
+    color: var(--TextColorOnDarkBG);
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    align-content: flex-end;
+}
+
+.image-container button:hover {
+    background-color: var(--Third-Color);
+    transition: 1.2s;
 }
 
 .image-2 {
-    background-color: var(--TextColorOnDarkBG);
-    grid-column: 3/4;
+    background-color: var(--Primary-Color);
+
+    border: 1px solid var(--Primary-Color);
 }
 
 .image-3 {
-    background-color: var(--TextColorOnDarkBG);
-    grid-column: 4/5;
+    background-color: var(--Primary-Color);
+
+    border: 1px solid var(--Primary-Color);
 }
 
+/* ------- Weather App ------- */
 #weather-app {
     background-color: var(--Footer-Background);
     border: 2px solid grey;
@@ -139,12 +194,26 @@ header button {
     margin-bottom: 20px;
     border-radius: 10px;
     font-family: var(--Main-Font);
+    text-align: center;
+    padding: 10px;
 }
 
-#weather-app p {
+#weather-app h3, p {
     color: white;
 }
 
+#weather-app .city {
+    font-family: var(--Main-Font);
+    font-weight: bold;
+    color: var(--Fourth-Color);
+}
+
+#weather-app img {
+    width: 100px;
+    padding: 20px 0 0 0;
+}
+
+/* ------- Newsletter Form ------- */
 #newsletter-form {
     font-family: var(--Main-Font);
     background-color: var(--Primary-Color);
@@ -171,7 +240,7 @@ header button {
 }
 
 #newsletter-form label {
-    color: var(--TextColorOnDarkBG);
+    color: var(--Footer-Background);
     font-weight: bold;
 }
 
@@ -225,7 +294,8 @@ footer a:hover {
 }
 
 #side-bar {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: #155b7e;
 }
 
@@ -263,7 +333,8 @@ footer a:hover {
 }
 
 #calendar {
-    align-self: start;
+    align-self: center;
+    width: 100%;
     border: 2px solid var(--TextColorOnDarkBG);
     height: inherit;
 }
@@ -368,6 +439,7 @@ legend {
 .default legend {
     color: var(--Secondary-Color);
 }
+
 .default {
     border: 1px solid var(--Secondary-Color);
 }
@@ -375,6 +447,7 @@ legend {
 .bronze legend {
     color: var(--Bronze-MB);
 }
+
 .bronze {
     border: 1px solid var(--Bronze-MB);
 }
@@ -382,6 +455,7 @@ legend {
 .silver legend {
     color: var(--Silver-MB);
 }
+
 .silver {
     border: 1px solid var(--Silver-MB);
 }
@@ -389,6 +463,7 @@ legend {
 .gold legend {
     color: var(--Gold-MB);
 }
+
 .gold {
     border: 1px solid var(--Gold-MB);
 }
@@ -400,16 +475,18 @@ legend {
 
 .menu {
     margin: 1rem auto;
-	border: 1px solid var(--Primary-Color);
+    border: 1px solid var(--Primary-Color);
     border-radius: 4px;
-	padding: 0.5rem;
-	background-color: var(--Footer-Background);
-	text-align: center;
+    padding: 0.5rem;
+    background-color: var(--Footer-Background);
+    text-align: center;
 }
+
 .menu button {
     padding: .5rem;
-	font-weight: 700;
+    font-weight: 700;
 }
+
 .members-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -449,29 +526,30 @@ legend {
 
 .list {
     display: flex;
-	flex-direction: column;
+    flex-direction: column;
 }
 
 .list section {
     display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	margin: 0;
-	padding: 0.25rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
 }
 
-.list section > * {
-	margin: 0 1rem;
+.list section>* {
+    margin: 0 1rem;
 }
 
 .list section img {
-	display: none; /* smaller viewports only */
+    display: none;
+    /* smaller viewports only */
 }
 
 .list section h3 {
-	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
 }
 
 .list section:nth-child(even) {
-	background-color: var(--Primary-Color);
+    background-color: var(--Primary-Color);
 }
