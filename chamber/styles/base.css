@@ -2,26 +2,47 @@
     header {
         display: flex;
         text-align: center;
+        align-items: center;
     }
+
+    #web-name {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
     #mode {
         font-size: 20px;
     }
+
     #hamburguer-menu {
         display: block;
+        font-weight: bold;
+        color: white;
+        background: none;
+        border: none;
     }
+
     nav li {
         display: block;
     }
+
     nav a {
         display: none;
         font-size: 14px;
     }
+
     .open a {
         display: block;
     }
+
     main {
         display: block;
     }
+
     #main-content {
         display: block;
     }
@@ -30,7 +51,7 @@
         width: 100%;
         height: 200px;
     }
-    
+
     #info-container {
         display: flex;
         flex-direction: column;
@@ -40,5 +61,40 @@
         width: 100%;
         margin: 0 0 20px 0;
     }
-    
+
+    /* ---------- Discover Page ---------- */
+    #discover-container {
+        display: block;
+    }
+
+    #mb-button {
+        display: inline-block;
+        font-size: 16px;
+        background: none;
+        border: none;
+    }
+
+    /* ---------- Join Us Page ---------- */
+    .membership-benefits {
+        display: none;
+    }
+
+    .show-benefits {
+        display: block;
+    }
+
+    /* ---------- Directory Page ---------- */
+    .members-container {
+        display: block;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list section {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

@@ -93,7 +93,7 @@ header button {
 }
 
 #hamburguer-menu.open::before {
-    content: "X";
+    content: "✖";
 }
 
 #main-content {
@@ -213,7 +213,7 @@ p {
 /* ------- Newsletter Form ------- */
 #newsletter-form {
     font-family: var(--Main-Font);
-    background-color: var(--Primary-Color);
+    background-color: #f9f9f9;
     grid-row: 3/3;
     grid-column: 3/5;
     margin-bottom: 20px;
@@ -234,7 +234,7 @@ p {
 #newsletter-form h3 {
     text-align: center;
     margin: 0 0 20px 0;
-    color: var(--TextColorOnDarkBG);
+    color: var(--Primary-Color);
 }
 
 #newsletter-form label {
@@ -321,6 +321,7 @@ footer a:hover {
 
 #discover-content {
     margin: 0 auto;
+    grid-column: 2/4;
 }
 
 #discover-content h1 {
@@ -350,7 +351,19 @@ h1 {
     text-align: center;
 }
 
-form {
+#mb-button {
+    display: none;
+}
+
+#mb-button::before {
+    content: '🔽';
+}
+
+#mb-button.open::before {
+    content: '❌';
+}
+
+.join-form {
     max-width: 600px;
     margin: 0 auto;
     background-color: #f9f9f9;
@@ -359,11 +372,12 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form div {
+.join-form div {
     margin-bottom: 10px;
 }
 
-label {
+.join-form label {
+    color: var(--Footer-Background);
     font-weight: bold;
 }
 

@@ -1,5 +1,13 @@
+// -------------------- Menu --------------------
+
 const menuButton = document.querySelector('#hamburguer-menu');
 const navMenu = document.querySelector(".nav-menu");
+
+menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('open');
+    navMenu.classList.toggle('open');
+})
+
 
 // -------------------- Weather App --------------------
 const apiKey = "a209ea9d26b2c89a9c0c101eebef022c";
@@ -57,14 +65,14 @@ modeButton.addEventListener('click', () => {
     if (modeButton.textContent.includes('☀')) {
         body.style.background = '#14213D';
         body.style.color = 'white';
-        form.style.background = 'black';
+        
         modeButton.style.background = 'gray';
         modeButton.textContent = '🌑';
     }
     else {
         body.style.background = 'white';
         body.style.color = 'black';
-        form.style.background = '#f9f9f9';
+        
         modeButton.style.background = '#00ABE7';
         modeButton.textContent = '☀';
     }
@@ -128,8 +136,5 @@ function displayMembers(members) {
     });
 }
 
-menuButton.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    menuButton.classList.toggle('open');
-})
+
 
